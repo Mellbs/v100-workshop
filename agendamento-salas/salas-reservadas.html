@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz - Espaço Connect</title>
+  <link rel="icon" href="images/logo - Copia.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+    }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+    }
+
+    header .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+    }
+
+    header nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .titulo {
+      text-align: center;
+      margin: 40px 0 10px 0;
+      color: #004aad;
+    }
+
+    /* Container ajustado */
+    .container-salas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .sala {
+      background-color: #ffffff;
+      border: 3px solid #004aad;
+      border-radius: 20px;
+      width: 600px; /* mais largo */
+      height: 320px; /* levemente mais alto */
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .sala:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+      background-color: #004aad;
+      color: white;
+    }
+
+    .sala img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #004aad;
+      margin-bottom: 15px;
+      background-color: #fff;
+    }
+
+    .sala .info h3 {
+      color: #004aad;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .sala:hover .info h3 {
+      color: white;
+    }
+
+    .sala .info p {
+      color: #333;
+      font-size: 15px;
+    }
+
+    .sala:hover .info p {
+      color: #e0e0e0;
+    }
+
+    .botoes {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+      margin-bottom: 60px;
+    }
+
+    .botao {
+      background-color: #004aad;
+      color: white;
+      border: none;
+      padding: 14px 35px;
+      border-radius: 10px;
+      font-size: 17px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .botao:hover {
+      background-color: #003a8c;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="body">
+  <img src="../agendamento-salas/images/cabeçalho.png" alt="Cabeçalho" width="1536px" height="45px">
+
+  <header style="padding: 17px;">
+    <div class="user-info">
+      <img src="../agendamento-salas/images/mascote.png" alt="Foto de Perfil" id="profilePic" class="profile-pic">
+      <div class="user-details" style="color: #fff;">
+        <h4>GRUPO 4 - ESPAÇO CONNECT</h4>
+        <h5>Agendamento de Salas</h5>
+      </div>
+    </div>
+    <nav>
+      <a href="tela-inicial.html" style="text-decoration: none; font-weight: bold;">Início</a>
+      <a href="salas.html" style="text-decoration: none; font-weight: bold;">Tópicos da Apresentação</a>
+      <a href="gerenciamento.html" style="text-decoration: none; font-weight: bold;">Membros do Grupo</a>
+      <a href="index.html" style="text-decoration: none; font-weight: bold;">Sair</a>
+    </nav>
+  </header>
+
+  <div class="titulo" style="margin-left: -950px;">
+    <h1>Quiz do Grupo 4</h1>
+  </div>
+
+  <main>
+    <section class="container-salas">
+      <div class="sala" onclick="window.open('https://8080-itgs6vf0evilk44uuuy4r-3b50b0e5.manusvm.computer/quiz_agendamento_salas.html')">
+        <img src="../agendamento-salas/images/calendario.png" alt="Ícone Quiz">
+        <div class="info">
+          <h3>QUIZ</h3>
+          <p>Teste seus conhecimentos sobre o sistema</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

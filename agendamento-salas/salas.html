@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Tópicos da Apresentação</title>
+  <link rel="icon" href="images/logo - Copia.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+    }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+    }
+
+    header .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+    }
+
+    header nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .titulo {
+      text-align: center;
+      margin: 40px 0 10px 0;
+      color: #004aad;
+    }
+
+    /* --- CONTAINERS --- */
+    .container-salas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      padding: 40px 60px;
+      justify-items: center;
+    }
+
+    .sala {
+      background-color: #ffffff;
+      border: 3px solid #004aad;
+      border-radius: 20px;
+      width: 250px;
+      height: 280px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .sala:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+      background-color: #004aad;
+      color: white;
+    }
+
+    .sala img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #004aad;
+      margin-bottom: 15px;
+      background-color: #fff;
+    }
+
+    .sala .info h3 {
+      color: #004aad;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .sala:hover .info h3 {
+      color: white;
+    }
+
+    .sala .info p {
+      color: #333;
+      font-size: 14px;
+    }
+
+    .sala:hover .info p {
+      color: #e0e0e0;
+    }
+
+    /* --- MODAL --- */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      border-radius: 20px;
+      width: 85%;
+      max-width: 1100px;
+      margin: 60px auto 50px auto;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-content h2 {
+      color: #004aad;
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .modal-content p {
+      color: #333;
+      font-size: 30px;
+      text-align: justify;
+      line-height: 1.6;
+      max-height: 60vh;
+      overflow-y: auto;
+      padding: 0 10px;
+    }
+
+    /* 🔹 Mascote menor no modal */
+    .modal-content img {
+      display: block;
+      margin: 25px auto 0 auto;
+      border-radius: 12px;
+      max-width: 200px;
+      height: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* --- RESPONSIVIDADE --- */
+    @media (max-width: 1000px) {
+      .container-salas {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container-salas {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="body">
+  <img src="../agendamento-salas/images/cabeçalho.png" alt="Cabeçalho" width="1536px" height="45px">
+
+  <header style="padding: 17px;">
+    <div class="user-info">
+      <img src="../agendamento-salas/images/mascote.png" alt="Foto de Perfil" id="profilePic" class="profile-pic">
+      <div class="user-details" style="color: #fff;">
+        <h4>GRUPO 4 - ESPAÇO CONNECT</h4>
+        <h5>Agendamento de Salas</h5>
+      </div>
+    </div>
+    <nav>
+      <a href="tela-inicial.html" style="text-decoration: none; font-weight: bold;">Início</a>
+      <a href="salas.html" style="text-decoration: none; font-weight: bold;">Tópicos da Apresentação</a>
+      <a href="gerenciamento.html" style="text-decoration: none; font-weight: bold;">Membros do Grupo</a>
+      <a href="index.html" style="text-decoration: none; font-weight: bold;">Sair</a>
+    </nav>
+  </header>
+
+  <div class="titulo" style="margin-left: -800px;">
+    <h1>Tópicos da Apresentação</h1>
+  </div>
+
+  <main>
+    <section class="container-salas">
+      <div class="sala" 
+      data-titulo="Introdução" 
+      data-texto="• Antes do Espaço Connect, o agendamento de salas era desorganizado e sem controle.<br><br>
+      • Ocorrências comuns: reservas duplicadas, horários conflitantes e falhas na comunicação.<br><br>
+      • Essa falta de organização dificultava o uso eficiente dos espaços.<br><br>
+      • O Espaço Connect surgiu para resolver esses problemas.<br><br>
+      • O sistema organiza reservas, evita erros e melhora o controle das salas.">
+      <img src="../agendamento-salas/images/calendario.png" alt="Ícone">
+      <div class="info">
+        <h3>Introdução</h3>
+        <p>Visão geral do trabalho</p>
+      </div>
+    </div>
+    
+    <div class="sala"
+      data-titulo="Viabilidade Econômica" 
+      data-texto="• Profissional júnior: cerca de R$ 3.000,00/mês.<br><br>
+      • Tempo estimado de desenvolvimento: 3 meses.<br><br>
+      • Custo total aproximado: R$ 72.000,00.<br><br>
+      • Valor cobre: planejamento, desenvolvimento, testes e implantação.<br><br>
+      • Investimento garante qualidade, funcionalidade e interface moderna.">
+      <img src="../agendamento-salas/images/calendario.png" alt="Ícone">
+      <div class="info">
+        <h3>Viabilidade Econômica</h3>
+        <p>Total gasto no projeto</p>
+      </div>
+    </div>
+    
+    <div class="sala" 
+      data-titulo="Desenvolvimento" 
+      data-texto="• Principais desafios: criar uma plataforma intuitiva e eficiente.<br><br>
+      • Foram realizados testes constantes e ajustes com base em feedbacks.<br><br>
+      • O foco foi garantir usabilidade e simplicidade.<br><br>
+      • Resultado: um sistema funcional e confiável, fruto do trabalho em equipe.">
+      <img src="../agendamento-salas/images/calendario.png" alt="Ícone">
+      <div class="info">
+        <h3>Desenvolvimento</h3>
+        <p>Etapas do projeto</p>
+      </div>
+    </div>
+    
+    <div class="sala" 
+      data-titulo="Funcionalidades" 
+      data-texto="• Evita conflitos de horário e reservas duplicadas.<br><br>
+      • Organiza solicitações e melhora o uso dos espaços.<br><br>
+      • Permite planejamento antecipado e controle institucional eficiente.<br><br>
+      • Oferece uma experiência rápida, prática e acessível.">
+      <img src="../agendamento-salas/images/calendario.png" alt="Ícone">
+      <div class="info">
+        <h3>Funcionalidades</h3>
+        <p>Recursos do sistema</p>
+      </div>
+    </div>
+    
+    <div class="sala" 
+      data-titulo="Resultados" 
+      data-texto="• Redução significativa de conflitos e erros no agendamento.<br><br>
+      • Processo de reserva ficou mais ágil e intuitivo.<br><br>
+      • A administração ganhou mais controle sobre o uso das salas.<br><br>
+      • Usuários demonstraram maior satisfação com o sistema.<br><br>
+      • O Espaço Connect trouxe organização e produtividade ao ambiente.">
+      <img src="../agendamento-salas/images/calendario.png" alt="Ícone">
+      <div class="info">
+        <h3>Resultados</h3>
+        <p>Conquistas e aprendizados</p>
+      </div>
+    </div>
+    
+    <div class="sala" 
+      data-titulo="Conclusão" 
+      data-texto="• O Espaço Connect representa modernização e eficiência na gestão de espaços.<br><br>
+      • Melhora a comunicação e a organização institucional.<br><br>
+      • Facilita o trabalho de alunos, professores e administradores.<br><br>
+      • Próximo passo: ampliar funcionalidades e expandir o uso do sistema.">
+      <img src="../agendamento-salas/images/calendario.png" alt="Ícone">
+      <div class="info">
+        <h3>Conclusão</h3>
+        <p>Encerramento e reflexões</p>
+      </div>
+    </div>
+    
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2 id="modalTitulo"></h2>
+      <p id="modalTexto"></p>
+    </div>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.sala');
+    const modal = document.getElementById('modal');
+    const modalTitulo = document.getElementById('modalTitulo');
+    const modalTexto = document.getElementById('modalTexto');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        modalTitulo.textContent = card.getAttribute('data-titulo');
+        modalTexto.innerHTML = card.getAttribute('data-texto');
+        modal.style.display = 'block';
+      });
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

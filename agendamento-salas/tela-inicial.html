@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+    <link rel="icon" href="images/logo - Copia.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="body-inicio">
+    <video autoplay muted loop id="bgVideo">
+        <source
+            src="videos/1h Blue Mood Lights _ Radial gradient colors _ Screensaver _ LED Light _ Purple _ Background.mp4"
+            type="video/mp4">
+    </video>
+
+    <img src="images/cabeçalho.png" alt="Cabeçalho" width="1536px" height="45px">
+    <header>
+        <div class="user-info">
+
+            <div class="menu-container">
+                <span class="menu-dots">⋮</span>
+                <div class="menu-options">
+                    <div id="editarPerfil">Editar Perfil</div>
+                </div>
+            </div>
+
+            <img src="images/mascote.png" alt="Foto de Perfil" id="profilePic" class="profile-pic">
+            <div class="user-details" style="color: #fff;">
+                <h4>GRUPO 4 - ESPAÇO CONNECT</h4>
+                <h5>Agendamento de Salas</h5>
+            </div>
+        </div>
+        <div style="position: relative;">
+            <input type="text" placeholder="Pesquisar sala..." id="busca" autocomplete="off">
+            <div id="resultados-busca"></div>
+        </div>
+        <nav>
+            <a href="tela-inicial.html" style="text-decoration: none; font-weight: bold;">Início</a>
+            <a href="salas.html" style="text-decoration: none;">Tópicos da Apresentação</a>
+            <a href="gerenciamento.html" id="linkGerenciamento" style="text-decoration: none;">Membros do Grupo</a>
+            <a href="index.html" style="text-decoration: none;">Sair</a>
+        </nav>
+    </header>
+
+    <div id="modalPerfil" class="modal">
+        <div class="modal-content">
+            <h2>Editar Perfil</h2>
+            <input type="text" id="novoUsername" placeholder="Novo nome de usuário">
+            <input type="text" id="novoEmailNome" placeholder="Parte antes do @">
+            <br>
+            <button id="salvarPerfil">Salvar</button>
+            <button id="cancelarPerfil">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- Modal de confirmação de saída -->
+    <div id="modalSair" class="modal-sair">
+        <div class="modal-conteudo">
+            <p>Deseja realmente sair?</p>
+            <div class="botoes-modal">
+                <button id="confirmarSair">Sim</button>
+                <button id="cancelarSair">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container-inicio">
+        <div class="Bem-vindo1">
+            <h1>Bem-vindo ao</h1>
+        </div>
+        <div class="Bem-vindo">
+            <h1>Sistema de Reserva de Salas,</h1>
+        </div>
+        <div class="Bem-vindo">
+            <h1>Espaço Connect!</h1>
+        </div>
+        <div class="informacoes-inicio">
+            <h3>Este workshop tem como objetivo apresentar o projeto desenvolvido sobre o sistema de agendamento de salas,</h3> 
+            <h3>destacando suas funcionalidades, etapas de desenvolvimento e resultados obtidos.</h3>
+            <br>
+            <h3>Vamos juntos dar início a essa apresentação (caso tenha dúvidas levante a mão).
+            </h3>
+        </div>
+    </main>
+
+    <footer class="footer" style="background-color: #004aad; color: white; padding: 5px; text-align: center;">
+        <div
+            style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto;">
+            <div>
+                <p style="font-size: 14px; font-weight: bold;">Sistema de Reserva de Salas - Espaço Connect</p>
+            </div>
+            <div>
+                <p style="font-size: 14px; font-weight: bold;">Suporte: suporte@espacoconnect.com</p>
+                <p style="font-size: 14px; font-weight: bold;">(11) 96933-1586</p>
+            </div>
+        </div>
+        <p style="font-size: 12px; margin-top: 10px; margin-bottom: 7px;">&copy; 2023 Sistema de Reserva de Salas -
+            Espaço Connect. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
